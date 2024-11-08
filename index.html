@@ -12,8 +12,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #860133; /* Fondo violeta oscuro */
-            color: #a20f37; /* Texto verde claro */
+            background-color: #860133;
+            color: #a20f37;
             padding: 10px;
         }
         .invitacion-container {
@@ -34,7 +34,7 @@
         }
         h1 {
             font-size: 2em;
-            color: #a20f37; /* rosa claro */
+            color: #a20f37;
         }
         p {
             font-size: 1.1em;
@@ -53,7 +53,7 @@
         .servicio-card {
             width: 120px;
             height: 150px;
-            background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+            background-color: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             padding: 15px;
             display: flex;
@@ -67,7 +67,7 @@
             width: 50px;
             height: 50px;
             margin-bottom: 10px;
-            background-color: #ffffff20; /* Fondo claro para el logo */
+            background-color: #ffffff20;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -84,63 +84,66 @@
             padding: 10px 20px;
             font-size: 1em;
             color: #fff;
-            background-color: #7e0e2c; /* Verde claro */
+            background-color: #7e0e2c;
             border: none;
             border-radius: 5px;
             text-decoration: none;
+            cursor: pointer;
         }
         .boton-confirmar:hover {
             background-color: #a20f37;
         }
+        .mensaje-confirmacion {
+            color: #7e0e2c;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: none;
+        }
     </style>
+    <script>
+        function confirmarAsistencia() {
+            document.getElementById("mensajeConfirmacion").style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <div class="invitacion-container">
-        <!-- Logo de la empresa -->
         <img src="logomain/logobeaty.png" alt="Logo de la Empresa" class="logo">
         
-        <!-- Información de la empresa -->
         <div class="empresa-info">
-            <p><strong>Spooky Beauty</strong> </p>
-            <p><strong>Spooky Beauty Paris S.A.</strong> </p>
-            <p><strong>7 Rue Rousselet, 75007 Paris, Francia</strong> </p>
+            <p><strong>Spooky Beauty</strong></p>
+            <p><strong>Spooky Beauty Paris S.A.</strong></p>
+            <p><strong>7 Rue Rousselet, 75007 Paris, Francia</strong></p>
         </div>
         
-        <!-- Título de la invitación -->
         <h1>¡Estás invitado al lanzamiento de nuestra nueva empresa en el rubro de la belleza!</h1>
         
-        <!-- Detalles del evento -->
         <div class="detalle-evento">
-            <p><strong>03.04.2025</strong> </p>
+            <p><strong>03.04.2025</strong></p>
             <p><strong>9AM</strong></p>
         </div>
         
-        <!-- Servicios ofrecidos -->
         <div class="descripcion-evento">
             <p>Únete a nosotros para descubrir nuestros servicios, que incluyen:</p>
             <div class="servicios">
-                <!-- Servicio 1 -->
                 <div class="servicio-card">
                     <div class="servicio-logo">
                         <img src="logomain/maquillajelogo.png" alt="Logo Maquillaje" width="60" height="60">
                     </div>
                     <div class="servicio-nombre">Talleres de maquillaje</div>
                 </div>
-                <!-- Servicio 2 -->
                 <div class="servicio-card">
                     <div class="servicio-logo">
                         <img src="logomain/logopiel.png" alt="Logo Cuidado de la piel" width="60" height="60">
                     </div>
                     <div class="servicio-nombre">Asesoría en cuidado de la piel</div>
                 </div>
-                <!-- Servicio 3 -->
                 <div class="servicio-card">
                     <div class="servicio-logo">
                         <img src="logomain/logopeinado.png" alt="Logo Peinado" width="60" height="60">
                     </div>
                     <div class="servicio-nombre">Clases de peinado</div>
                 </div>
-                <!-- Servicio 4 -->
                 <div class="servicio-card">
                     <div class="servicio-logo">
                         <img src="logomain/logobelleza.png" alt="Logo Productos" width="60" height="60">
@@ -150,15 +153,11 @@
             </div>
         </div>
         
-        <!-- Mensaje adicional opcional -->
-        <div class="mensaje-final">
-            <p></p>
-        </div>
-        
         <p>¡Te esperamos para celebrar juntos este nuevo comienzo!</p>
         
-        <!-- Botón de confirmación de asistencia -->
-        <a href="mailto:confirmacion@evento.com?subject=Confirmación%20de%20Asistencia" class="boton-confirmar">Confirmar Asistencia</a>
+        <button class="boton-confirmar" onclick="confirmarAsistencia()">Confirmar Asistencia</button>
+        
+        <p id="mensajeConfirmacion" class="mensaje-confirmacion">Asistencia confirmada, nos vemos pronto</p>
     </div>
 </body>
 </html>
