@@ -18,31 +18,25 @@
         }
         .invitacion-container {
             text-align: center;
-            padding: 25px;
+            padding: 20px;
             max-width: 650px;
+            width: 100%;
             background-color: #fcf6f8;
             border-radius: 10px;
             box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
         }
         .logo {
-            width: 180px;
+            width: 150px;
             height: auto;
             margin: 0 auto 20px;
         }
-        .empresa-info, .detalle-evento, .descripcion-evento, .mensaje-final {
-            margin: 10px 0;
-        }
         h1 {
-            font-size: 2em;
+            font-size: 1.8em;
             color: #a20f37;
         }
         p {
-            font-size: 1.1em;
+            font-size: 1em;
             margin: 10px 0;
-        }
-        .detalle-evento strong, .empresa-info strong {
-            font-weight: bold;
-            color: #a20f37;
         }
         .servicios {
             display: flex;
@@ -98,6 +92,40 @@
             font-size: 1.2em;
             margin-top: 20px;
             display: none;
+        }
+        
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            body {
+                padding: 5px;
+                height: auto;
+            }
+            .invitacion-container {
+                padding: 15px;
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            }
+            .logo {
+                width: 120px;
+                margin-bottom: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .servicio-card {
+                width: 100px;
+                height: 130px;
+                padding: 10px;
+            }
+            .servicio-nombre {
+                font-size: 0.8em;
+            }
+            .boton-confirmar {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+            .mensaje-confirmacion {
+                font-size: 1em;
+            }
         }
     </style>
     <script>
